@@ -19,3 +19,6 @@
 8. 实例化中的criterion还有optimizer 如何操作
 9. epoch训练中的 optimizer.zero_grad() loss.backward() optimizer.step()
 10. 画图检验
+<h1>Logistic_Regression</h1>
+做分类问题和上面一样，但是criterion=torch.nn.BCELoss() optimizer=.SGD
+然后__init__(): self.linear=torch.nn.Linear(1,1) forward():F.sigmoid(self.linear(x)) return y_hat
