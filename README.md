@@ -7,3 +7,15 @@
 <h1> gradient descent</h1>
 要自己学会每一步怎么梯度下降
 梯度下降可以用Adam算法/SGD算法
+<h1> BackPropagation </h1>
+要熟练torch，比如
+1。自己设定一个class (torch.nn.Module):
+2. __init__():/self.forward():
+3. model()种类，SGD..
+4. forward()中用relu/sigmoid函数
+5. epoch训练中 梯度下降怎么弄？ 
+6. __init__()函数中 设置线性层linear ==>wx+b
+7. TensorDataset DataLoader的用法
+8. 实例化中的criterion还有optimizer 如何操作
+9. epoch训练中的 optimizer.zero_grad() loss.backward() optimizer.step()
+10. 画图检验
