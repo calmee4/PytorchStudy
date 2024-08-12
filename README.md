@@ -22,3 +22,8 @@
 <h1>Logistic_Regression</h1>
 做分类问题和上面一样，但是criterion=torch.nn.BCELoss() optimizer=.SGD
 然后__init__(): self.linear=torch.nn.Linear(1,1) forward():F.sigmoid(self.linear(x)) return y_hat
+<h1>Dataset，Dataloader的运用</h1>
+需要用torch.nn.util中的dataset，Dataloader
+dataset中需要有两个函数,__getitem__ 和__len__ ，一个是得到inputs和outputs，一个是得到数据集个数
+用文件传入，再用numpy处理转为x_data和y_data
+Model操作还是一样，有optim和criterion 以及loss.backward()，
