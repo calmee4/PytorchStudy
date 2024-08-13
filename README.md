@@ -38,4 +38,8 @@ Model操作还是一样，有optim和criterion 以及loss.backward()，
 <h2>RNNcell</h2>
 需要自己手动写循环，遍历每一个SeqLen。切记，label要是long类型的，否则无法在CrossEntropy运算,然后输入input_size,hidden_size，而且只有一层，多层还得自己写
 <h2>RNN</h2>
-不用自己写循环，只需要input_size,hidden_size,num_layers，其实可以认为hidden_size就是输出值
+不用自己写循环，只需要input_size,hidden_size,num_layers，最终输出是一个系数矩阵，用idx.max(dim=1)取得这些行的最大值，再遍历就可以输出最终的结果。
+<h2>Embedding</h2>
+如果有无数个字符，那么就需要用n*n 独热编码，显然是不行的，所以用较小矩阵Embedding，不同系数代指不同值就行了
+
+
