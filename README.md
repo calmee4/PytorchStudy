@@ -27,3 +27,6 @@
 dataset中需要有两个函数,__getitem__ 和__len__ ，一个是得到inputs和outputs，一个是得到数据集个数
 用文件传入，再用numpy处理转为x_data和y_data
 Model操作还是一样，有optim和criterion 以及loss.backward()，
+<h1>全连接层对图像的操作</h1>
+这里增加了一个新的库，torchvision，先导入MNIST数据集，再对这些数据进行操作，其中用到了transform，可以理解为一个操作函数，把图像ToTensor转为Input一维输入，再归一化，用标准差和平均值，之后就是正常的训练，这里虽然做的是图像处理，本质还是输入输出的逻辑回归问题
+<h1>CNN操作</h1>
