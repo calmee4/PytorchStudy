@@ -30,3 +30,7 @@ Model操作还是一样，有optim和criterion 以及loss.backward()，
 <h1>全连接层对图像的操作</h1>
 这里增加了一个新的库，torchvision，先导入MNIST数据集，再对这些数据进行操作，其中用到了transform，可以理解为一个操作函数，把图像ToTensor转为Input一维输入，再归一化，用标准差和平均值，之后就是正常的训练，这里虽然做的是图像处理，本质还是输入输出的逻辑回归问题
 <h1>CNN操作</h1>
+<h2>Basic:</h2>
+把之前的Linear层 改成了Conv2d 卷积层，还有个Subsampling，使图像大小减小 还有把数据 放在device (CUDA)中，让显卡运算，对model,inputs,outputs.to(device) 在训练的时候这么操作，还有 test的时候 with torch.no_grad()  作为测试
+
+Advanced
