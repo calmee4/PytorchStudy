@@ -33,5 +33,5 @@ Model操作还是一样，有optim和criterion 以及loss.backward()，
 <h2>Basic</h2>
 把之前的Linear层 改成了Conv2d 卷积层，还有个Subsampling，使图像大小减小 还有把数据 放在device (CUDA)中，让显卡运算，对model,inputs,outputs.to(device) 在训练的时候这么操作，还有 test的时候 with torch.no_grad()  作为测试
 <h2>Advanced</h2>
-设置了一个Inception（盗梦空间），把部件抽象化为Inception，进行了更加复杂的优化，效果更好，用了branch，提取了各个特征，还用了size为1的kernal（内核）
+设置了一个Inception（盗梦空间），把部件抽象化为Inception，进行了更加复杂的优化，效果更好，用了branch，提取了各个特征，还用了size为1的kernal（内核）减少计算，把channel变少。
 
