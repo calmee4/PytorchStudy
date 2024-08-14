@@ -1,4 +1,8 @@
-# 刘二大人Pytorch个人思考
+<h1>个人神经网络学习路线</h1>
+<h2>过去，老师推荐我看吴恩达的神经网络课程，但是因为讲的英文且内容过于冗长，因此我自己贴身定制了学习路线</h2>
+<h2>首先学习李宏毅的课程，明白基本模型的概念</h2>
+<h2>再学习刘二大人的pytorch课程，学习如何使用torch库</h2>
+<h2>以下是个人学习的记录</h2>
 <h1> Linear Model</h1>
 <h2> y=w*x和w*x+b的模型</h2>
 这里主要是学习如何设置自己的模型def forward(x): return w*x+b 再求损失函数 def loss(x_val,y_val): return math.pow(y_val-forward(x),2) 和MSE lose_all/sum
