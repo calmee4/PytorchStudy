@@ -41,5 +41,7 @@ Model操作还是一样，有optim和criterion 以及loss.backward()，
 不用自己写循环，只需要input_size,hidden_size,num_layers，最终输出是一个系数矩阵，用idx.max(dim=1)取得这些行的最大值，再遍历就可以输出最终的结果。
 <h2>Embedding</h2>
 如果有无数个字符，那么就需要用n*n 独热编码，显然是不行的，所以用较小矩阵Embedding，不同系数代指不同值就行了
-
-
+<h2>双向循环RNN</h2>
+这里做了个复杂的classifier，用人名预测他的国家，分类出了18个国家，首先对人名字进行处理，转为ASCII码，再用embedding进行统筹，作为Input，中间运用了双层的 双向循环神经网络 辅助输出hidden，再用hidden经过Linear层预测出18个国家，得到最终结果。
+具体操作1.国家转为了0 1 2 3 4.. 2.人名就是ASCII码 3.处理dataset，定义__len__和 __getItem__ ，把输入全部转为Tensor类型
+4.对ASCII码进行排序，用排好的序列的下标取重新修正人名和国家名 使得Input和Lables一一对应 5.padded_sequence优化没有意义的0 embedding 
